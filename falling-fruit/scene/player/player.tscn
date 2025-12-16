@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs3ija0kqdo02"]
+[gd_scene load_steps=5 format=3 uid="uid://deyxq7n40sld8"]
 
-[ext_resource type="Script" uid="uid://bxh2i8x0dd8f4" path="res://scene/player/player.gd" id="1_cm2cf"]
-[ext_resource type="Texture2D" path="res://assets/player/player.png" id="1_v7pse"]
+[ext_resource type="Script" uid="uid://cpny72vada6jw" path="res://scene/player/player.gd" id="1_cm2cf"]
+[ext_resource type="Texture2D" uid="uid://dtmlcnv4uoiig" path="res://assets/player/player.png" id="1_v7pse"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cm2cf"]
 height = 50.0
@@ -10,6 +10,7 @@ height = 50.0
 height = 50.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(534, 334)
 script = ExtResource("1_cm2cf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
