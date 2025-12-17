@@ -11,10 +11,9 @@ func _ready() -> void:
 func show_game_over():
 	get_tree().paused = true
 	visible = true
+	continue_label.visible = false
 	anim_player.play("GameOver")
-	continue_label.visible = true
-	anim_player.queue("continuelabel")
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

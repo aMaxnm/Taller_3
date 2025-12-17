@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqpm7m218jgn1"]
+
+[ext_resource type="Script" uid="uid://bx6777l2w8mme" path="res://scene/HUD/hud.gd" id="1_eu6mg"]
+[ext_resource type="LabelSettings" uid="uid://b5cvppinxu2ny" path="res://scene/menu/subtitle.tres" id="2_03olt"]
+[ext_resource type="Texture2D" uid="uid://cmtfy6y61y8j3" path="res://assets/hud/heart.png" id="3_03olt"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_eu6mg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Score: 0"
+label_settings = ExtResource("2_03olt")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 0
+
+[node name="LifeLabel" type="Label" parent="MarginContainer2"]
+layout_mode = 2
+text = "Lives: "
+label_settings = ExtResource("2_03olt")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/LifeLabel"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = -6.0
+offset_right = 195.0
+offset_bottom = 37.0
+texture = ExtResource("3_03olt")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer2/LifeLabel"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -6.0
+offset_right = 263.0
+offset_bottom = 37.0
+texture = ExtResource("3_03olt")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer2/LifeLabel"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = -6.0
+offset_right = 329.0
+offset_bottom = 37.0
+texture = ExtResource("3_03olt")
+expand_mode = 1
