@@ -1,11 +1,10 @@
 extends "res://scene/objects/falling_object_base.gd"
+class_name Bomba
 
+@export var life_penalty: int = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	fall_speed = randf_range(300, 550)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func on_caught() -> void:
+	GameManager.lose_life(life_penalty)

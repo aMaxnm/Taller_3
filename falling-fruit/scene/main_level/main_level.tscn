@@ -5,7 +5,7 @@
 
 [node name="MainLevel" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_dq0vj")]
-position = Vector2(565, 606)
+[node name="Player" parent="." groups=["Catcher"] instance=ExtResource("1_dq0vj")]
+position = Vector2(565, 543)
 
 [node name="Spawner" parent="." instance=ExtResource("2_bqsow")]
