@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="falling fruit"
-run/main_scene="uid://c5v01gn2e2ny"
+run/main_scene="uid://mesukkehe7nv"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
