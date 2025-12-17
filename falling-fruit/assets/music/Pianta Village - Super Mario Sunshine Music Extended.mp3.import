@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw7n80djbufsd"
+path="res://.godot/imported/Pianta Village - Super Mario Sunshine Music Extended.mp3-c02e10f2909c2dfcccb279d46e424e01.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Pianta Village - Super Mario Sunshine Music Extended.mp3"
+dest_files=["res://.godot/imported/Pianta Village - Super Mario Sunshine Music Extended.mp3-c02e10f2909c2dfcccb279d46e424e01.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

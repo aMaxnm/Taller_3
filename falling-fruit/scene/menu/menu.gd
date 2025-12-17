@@ -1,10 +1,10 @@
 extends MarginContainer
 
 var main_level_scene = preload("res://scene/main_level/main_level.tscn")
-
+var bg_music = load("res://assets/music/Pianta Village - Super Mario Sunshine Music Extended.mp3")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	MusicManager.play_music("res://assets/music/Pianta Village - Super Mario Sunshine Music Extended.mp3")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
