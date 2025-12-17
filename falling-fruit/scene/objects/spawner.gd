@@ -2,7 +2,7 @@ extends Node2D
 
 @export var fruit_to_spawn: PackedScene
 @export var bomb_to_spawn: PackedScene
-@export var bomb_chance: float = 0.25
+@export var bomb_chance: float = 0.50
 
 var screen_size: Vector2
 var offset := 50

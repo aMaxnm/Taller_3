@@ -23,4 +23,5 @@ func lose_life(amount: int = 1) -> void:
 		game_over()
 
 func game_over() -> void:
+	lives = 3
 	SignalManager.on_game_over.emit()

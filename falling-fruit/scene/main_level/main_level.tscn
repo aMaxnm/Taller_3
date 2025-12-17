@@ -21,4 +21,5 @@ position = Vector2(565, 543)
 [node name="Hud" parent="." instance=ExtResource("4_p3ym8")]
 
 [node name="GameOver" parent="." instance=ExtResource("5_kg8md")]
-visible = false
+
+[node name="Spawner2" parent="." instance=ExtResource("2_bqsow")]
