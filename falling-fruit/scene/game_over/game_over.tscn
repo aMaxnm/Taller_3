@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://drdfjo8ofefvb"]
+
+[ext_resource type="Script" uid="uid://ctfnq7kt0laph" path="res://scene/game_over/game_over.gd" id="1_5bvfr"]
+[ext_resource type="LabelSettings" uid="uid://bacgsyv35k3ff" path="res://scene/menu/title.tres" id="1_og4fc"]
+[ext_resource type="LabelSettings" uid="uid://b5cvppinxu2ny" path="res://scene/menu/subtitle.tres" id="2_5bvfr"]
+
+[sub_resource type="Animation" id="Animation_31bb3"]
+resource_name = "GameOver"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/GameOver:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.23333333, 0.5, 0.8, 1.0666667, 1.3666667, 1.6666666, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["G", "GA", "GAM", "GAME ", "GAME O", "GAME OV", "GAME OVE", "GAME OVER"]
+}
+
+[sub_resource type="Animation" id="Animation_rk27g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/GameOver:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["GAME OVER"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/ContinueLabel:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_og4fc"]
+resource_name = "continuelabel"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/ContinueLabel:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.93333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.48235294), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y23nh"]
+_data = {
+&"GameOver": SubResource("Animation_31bb3"),
+&"RESET": SubResource("Animation_rk27g"),
+&"continuelabel": SubResource("Animation_og4fc")
+}
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_5bvfr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.40392157)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GameOver" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = ExtResource("1_og4fc")
+horizontal_alignment = 1
+
+[node name="ContinueLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press Space to Continue"
+label_settings = ExtResource("2_5bvfr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_y23nh")
+}
