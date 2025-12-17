@@ -1,11 +1,17 @@
 extends Node
 
+var score: int = 0
+var lives: int = 3
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func add_score(amount: int) -> void:
+	score = max(0, score + amount) # opcional: no bajar de 0
+	print("Score:", score)
 
+func lose_life(amount: int = 1) -> void:
+	lives -= amount
+	print("Lives:", lives)
+	if lives <= 0:
+		game_over()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func game_over() -> void:
+	print("GAME OVER")

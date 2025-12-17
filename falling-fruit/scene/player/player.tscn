@@ -21,7 +21,7 @@ position = Vector2(3, -18)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_cm2cf")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Catcher"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(3, -18)
