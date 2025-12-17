@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://dtmlcnv4uoiig" path="res://assets/player/player.png" id="1_v7pse"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cm2cf"]
-radius = 20.0
+radius = 26.0
 height = 104.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7pse"]
-radius = 19.0
+radius = 25.0
 height = 100.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -20,7 +20,7 @@ script = ExtResource("1_cm2cf")
 texture = ExtResource("1_v7pse")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, -40)
+position = Vector2(7, -50)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_cm2cf")
 
@@ -28,7 +28,7 @@ shape = SubResource("CapsuleShape2D_cm2cf")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(5, -39)
+position = Vector2(6, -49)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_v7pse")
 debug_color = Color(0.7547777, 0.21638435, 0.9768273, 0.41960785)

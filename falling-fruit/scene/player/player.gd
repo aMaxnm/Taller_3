@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var sprite: Sprite2D = $Sprite2D
+
 @export var movement_speed: float = 20000.0
 @export var dash_multiplier: float = 3.0
 @export var dash_duration: float = 0.15
@@ -25,7 +27,15 @@ func _handle_movement(delta: float) -> void:
 		speed *= dash_multiplier
 
 	var direction := Input.get_axis("move_L", "move_R")
+
+	# FLIP DEL SPRITE
+	if direction < 0:
+		sprite.flip_h = true
+	elif direction > 0:
+		sprite.flip_h = false
+
 	velocity.x = direction * speed * delta
+
 
 func _handle_dash(delta: float) -> void:
 	if Input.is_action_just_pressed("dash") and not is_dashing:

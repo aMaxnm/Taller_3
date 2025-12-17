@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://drdfjo8ofefvb"]
+[gd_scene load_steps=8 format=3 uid="uid://coeyafqcmx8t8"]
 
 [ext_resource type="Script" uid="uid://ctfnq7kt0laph" path="res://scene/game_over/game_over.gd" id="1_5bvfr"]
-[ext_resource type="LabelSettings" uid="uid://bacgsyv35k3ff" path="res://scene/menu/title.tres" id="1_og4fc"]
-[ext_resource type="LabelSettings" uid="uid://b5cvppinxu2ny" path="res://scene/menu/subtitle.tres" id="2_5bvfr"]
+[ext_resource type="LabelSettings" uid="uid://cjus0fw4kfcc8" path="res://scene/menu/title.tres" id="1_og4fc"]
+[ext_resource type="LabelSettings" path="res://scene/menu/subtitle.tres" id="2_5bvfr"]
 
 [sub_resource type="Animation" id="Animation_31bb3"]
 resource_name = "GameOver"
@@ -44,7 +44,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_og4fc"]
@@ -71,6 +71,8 @@ _data = {
 }
 
 [node name="GameOver" type="CanvasLayer"]
+process_mode = 3
+visible = false
 script = ExtResource("1_5bvfr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -104,6 +106,7 @@ label_settings = ExtResource("1_og4fc")
 horizontal_alignment = 1
 
 [node name="ContinueLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Press Space to Continue"
 label_settings = ExtResource("2_5bvfr")

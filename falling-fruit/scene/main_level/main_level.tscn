@@ -1,11 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5v01gn2e2ny"]
+[gd_scene load_steps=6 format=3 uid="uid://c5v01gn2e2ny"]
 
+[ext_resource type="Texture2D" uid="uid://bw30vlr6pe3v5" path="res://assets/background/background.png" id="1_8tepj"]
 [ext_resource type="PackedScene" uid="uid://deyxq7n40sld8" path="res://scene/player/player.tscn" id="1_dq0vj"]
 [ext_resource type="PackedScene" uid="uid://frkhob14860g" path="res://scene/objects/Spawner.tscn" id="2_bqsow"]
+[ext_resource type="PackedScene" uid="uid://ugax2cx4520s" path="res://scene/HUD/hud.tscn" id="4_p3ym8"]
+[ext_resource type="PackedScene" uid="uid://coeyafqcmx8t8" path="res://scene/game_over/game_over.tscn" id="5_kg8md"]
 
 [node name="MainLevel" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_8tepj")
 
 [node name="Player" parent="." groups=["Catcher"] instance=ExtResource("1_dq0vj")]
 position = Vector2(565, 543)
 
 [node name="Spawner" parent="." instance=ExtResource("2_bqsow")]
+
+[node name="Hud" parent="." instance=ExtResource("4_p3ym8")]
+
+[node name="GameOver" parent="." instance=ExtResource("5_kg8md")]
+visible = false
