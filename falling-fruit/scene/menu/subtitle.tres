@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b5cvppinxu2ny"]
+
+[ext_resource type="FontFile" uid="uid://bsjpih7j0smsb" path="res://assets/fonts/8-bit-hud.ttf" id="1_urfsw"]
+
+[resource]
+font = ExtResource("1_urfsw")
+font_size = 19
+outline_size = 19
+outline_color = Color(0, 0.3019608, 0.039215688, 1)

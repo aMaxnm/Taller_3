@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bacgsyv35k3ff"]
+
+[ext_resource type="FontFile" uid="uid://bgdj2vx3ueyaq" path="res://assets/fonts/8-bitanco.ttf" id="1_uak0l"]
+
+[resource]
+font = ExtResource("1_uak0l")
+font_size = 90
+outline_size = 30
+outline_color = Color(3.429316e-07, 0.30066276, 0.03610403, 1)
