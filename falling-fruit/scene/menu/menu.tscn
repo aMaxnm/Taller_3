@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dln43ihhjtb5g"]
 
-[ext_resource type="Script" path="res://scene/menu/menu.gd" id="1_ojih3"]
+[ext_resource type="Script" uid="uid://d3o74sjk72vkl" path="res://scene/menu/menu.gd" id="1_ojih3"]
 [ext_resource type="Texture2D" uid="uid://bw30vlr6pe3v5" path="res://assets/background/background.png" id="1_wwfty"]
 [ext_resource type="LabelSettings" uid="uid://cjus0fw4kfcc8" path="res://scene/menu/title.tres" id="2_53055"]
 [ext_resource type="LabelSettings" path="res://scene/menu/subtitle.tres" id="3_ojih3"]
@@ -80,5 +80,22 @@ text = "EXIT"
 label_settings = ExtResource("3_ojih3")
 horizontal_alignment = 1
 
+[node name="Creditos" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_7ruq5")
+texture_hover = ExtResource("5_i0sq5")
+
+[node name="Label" type="Label" parent="VBoxContainer/Creditos"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 41.0
+offset_right = 241.0
+offset_bottom = 72.0
+text = "CREDITS"
+label_settings = ExtResource("3_ojih3")
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
