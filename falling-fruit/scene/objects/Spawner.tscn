@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://frkhob14860g"]
+
+[ext_resource type="Script" uid="uid://cwai34ij3c23t" path="res://scene/objects/spawner.gd" id="1_fuanm"]
+[ext_resource type="PackedScene" uid="uid://dr234aha60fea" path="res://scene/objects/fruta.tscn" id="2_bkb5o"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_fuanm")
+fruit_to_spawn = ExtResource("2_bkb5o")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

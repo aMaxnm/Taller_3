@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqdjctuhnet3d"]
+
+[ext_resource type="PackedScene" uid="uid://cdjwipwlor4kb" path="res://scene/objects/FallingObjectBase.tscn" id="1_ckuq4"]
+[ext_resource type="Script" uid="uid://51r6at5j5kjs" path="res://scene/objects/bomba.gd" id="2_3tngj"]
+
+[node name="bomba" instance=ExtResource("1_ckuq4")]
+script = ExtResource("2_3tngj")
